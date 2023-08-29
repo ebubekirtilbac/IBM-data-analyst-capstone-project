@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/styles/sn.css">
+  </head>
+  <body>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%205/Peer%20Graded%20Assignment%20-%20%20Building%20a%20dashboard%20with%20Cognos%20Dashboard%20Embedded/images/IDSNlogo.png" width="200" height="200">
+    <h1>Peer-Graded Assignment: Building a dashboard with Cognos Dashboard Embedded (CDE)</h1>
+    <p><strong>Estimated time needed:</strong> 45 minutes</p>
+    <p>In this assignment, you will create some visualizations and add them to dashboards using Cognos Dashboard Embedded (CDE).</p>
+    <h2>Software Used in this Assignment</h2>
+    <p>In this assignment you will use the free lite plan version of Cognos Dashboard Embedded (CDE) through IBM Cloud.</p>
+    <h2>Dataset Used in this Assignment</h2>
+    <p>The dataset you are going to use in this assignment comes from the following source: <a href="https://stackoverflow.blog/2019/04/09/the-2019-stack-overflow-developer-survey-results-are-in?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBM-DA0321EN-SkillsNetwork-21426264&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ&#x26;cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBM-DA0321EN-SkillsNetwork-21426264&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">https://stackoverflow.blog/2019/04/09/the-2019-stack-overflow-developer-survey-results-are-in/</a> under a <strong><a href="https://opendatacommons.org/licenses/odbl/1-0?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBM-DA0321EN-SkillsNetwork-21426264&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">ODbL: Open Database License</a></strong>.</p>
+    <p>We are using a modified subset of that dataset for the assignment, so to follow the assigment instructions successfully, please use the dataset provided with the assignment, rather than the dataset from the original source.</p>
+    <h2>Guidelines for the Submission</h2>
+    <ol>
+      <li>
+        <p>Download the 2 files <a href="https://cocl.us/DA0321EN-LargeData-m5_survey_data_demographics.csv" target="_blank" rel="external">m5_survey_data_demographics.csv</a> and <a href="https://cocl.us/DA0321EN-LargeData-m5_survey_data_technologies_normalised.csv" target="_blank" rel="external">m5_survey_data_technologies_normalised.csv</a>. Upload these 2 CSV files as data assets to your project in CDE.</p>
+      </li>
+      <li>
+        <p>Create 3 dashboards (3 separate tabs under a single dashboard) as follows:</p>
+        <ul>
+          <li>
+            <p>One dashboard using the 2 x 2 rectangle areas tabbed template - rename this dashboard tab to <strong>Current Technology Usage</strong>.</p>
+          </li>
+          <li>
+            <p>One dashboard using the 2 x 2 rectangle areas tabbed template - rename this dashboard tab to <strong>Future Technology Trend</strong>.</p>
+          </li>
+          <li>
+            <p>One dashboard using the 2 x 2 rectangle areas tabbed template - rename this dashboard tab to <strong>Demographics</strong>.</p>
+          </li>
+        </ul>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%205/Peer%20Graded%20Assignment%20-%20%20Building%20a%20dashboard%20with%20Cognos%20Dashboard%20Embedded/images/2.png" width="533" height="300">
+      </li>
+    </ol><br>
+    <ol start="3">
+      <li>
+        <p>On the <strong>Current Technology Usage</strong> dashboard tab, use the data asset <strong>m5_survey_data_technologies_normalised.csv</strong> and capture the following metrics as visualizations:</p>
+        <ul>
+          <li>
+            <p>In the first rectangle <strong>(Panel 1)</strong>:</p>
+            <ul>
+              <li>Capture <strong>Top 10 LanguageWorkedWith</strong>.</li>
+              <li>Visualize as a <strong>Bar chart</strong>.</li>
+              <li>Utilize <strong>Bars</strong>, <strong>Length</strong>, <strong>Color</strong> fields of Bar chart.</li>
+              <li>Include <strong>Show value labels</strong> feature.</li>
+              <li>Include a proper <strong>Chart title</strong>.</li>
+            </ul>
+          </li>
+          <li>
+            <p>In the second rectangle <strong>(Panel 2)</strong>:</p>
+            <ul>
+              <li>Capture <strong>Top 10 DatabaseWorkedWith</strong>.</li>
+              <li>Visualize as a <strong>Column chart</strong>.</li>
+              <li>Utilize <strong>Bars</strong>, <strong>Length</strong>, <strong>Color</strong> fields of Column chart.</li>
+              <li>Include <strong>Show value labels</strong> feature.</li>
+              <li>Include a proper <strong>Chart title</strong>.</li>
+            </ul>
+          </li>
+          <li>
+            <p>In the third rectangle <strong>(Panel 3)</strong>:</p>
+            <ul>
+              <li>Capture <strong>PlatformWorkedWith</strong>.</li>
+              <li>Visualize as a <strong>Word cloud chart</strong>.</li>
+              <li>Utilize <strong>Words</strong>, <strong>Size</strong>, <strong>Color</strong> fields of Word cloud chart.</li>
+              <li>Include a proper <strong>Chart title</strong>.</li>
+            </ul>
+          </li>
+          <li>
+            <p>In the fourth rectangle <strong>(Panel 4)</strong>:</p>
+            <ul>
+              <li>Capture <strong>Top 10 WebFrameWorkedWith</strong>.</li>
+              <li>Visualize as a <strong>Hierarchy bubble chart</strong>.</li>
+              <li>Utilize <strong>Bubbles</strong>, <strong>Size</strong>, <strong>Color</strong> fields of Hierarchy bubble chart.</li>
+              <li>Include a proper <strong>Chart title</strong>.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol><br>
+    <ol start="4">
+      <li>
+        <p>On the <strong>Future Technology Trend</strong> dashboard tab, use the data asset <strong>m5_survey_data_technologies_normalised.csv</strong> and capture the following metrics as visualizations:</p>
+        <ul>
+          <li>
+            <p>In the first rectangle <strong>(Panel 1)</strong>:</p>
+            <ul>
+              <li>Capture <strong>Top 10 LanguageDesireNextYear</strong>.</li>
+              <li>Visualize as a <strong>Bar chart</strong>.</li>
+              <li>Utilize <strong>Bars</strong>, <strong>Length</strong>, <strong>Color</strong> fields of Bar chart.</li>
+              <li>Include <strong>Show value labels</strong> feature.</li>
+              <li>Include a proper <strong>Chart title</strong>.</li>
+            </ul>
+          </li>
+          <li>
+            <p>In the second rectangle <strong>(Panel 2)</strong>:</p>
+            <ul>
+              <li>Capture <strong>Top 10 DatabaseDesireNextYear</strong>.</li>
+              <li>Visualize as a <strong>Column chart</strong>.</li>
+              <li>Utilize <strong>Bars</strong>, <strong>Length</strong>, <strong>Color</strong> fields of Column chart.</li>
+              <li>Include <strong>Show value labels</strong> feature.</li>
+              <li>Include a proper <strong>Chart title</strong>.</li>
+            </ul>
+          </li>
+          <li>
+            <p>In the third rectangle <strong>(Panel 3)</strong>:</p>
+            <ul>
+              <li>capture <strong>PlatformDesireNextYear</strong>.</li>
+              <li>Visualize as a <strong>Tree map chart</strong>.</li>
+              <li>Utilize <strong>Area hierarchy</strong>, <strong>Size</strong>, <strong>Heat</strong> fields of Tree map chart.</li>
+              <li>Include <strong>Contrast label color</strong> feature.</li>
+              <li>Include a proper <strong>Chart title</strong>.</li>
+            </ul>
+          </li>
+          <li>
+            <p>In the fourth rectangle <strong>(Panel 4)</strong>:</p>
+            <ul>
+              <li>Capture <strong>Top 10 WebFrameDesireNextYear</strong>.</li>
+              <li>Visualize as a <strong>Hierarchy bubble chart</strong>.</li>
+              <li>Utilize <strong>Bubbles</strong>, <strong>Size</strong>, <strong>Color</strong> fields of Hierarchy bubble chart.</li>
+              <li>Include a proper <strong>Chart title</strong>.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol><br>
+    <ol start="5">
+      <li>
+        <p>On the <strong>Demographics</strong> dashboard tab, use the data asset <strong>m5_survey_data_demographics.csv</strong> and capture the following metrics as visualizations:</p>
+        <ul>
+          <li>
+            <p>Use <strong>Filters for this tab</strong> feature to filter out entries of other types except <strong>Man</strong> and <strong>Woman</strong> from the data point <strong>Gender</strong>.</p>
+          </li>
+          <li>
+            <p>In the first rectangle <strong>(Panel 1)</strong>:</p>
+            <ul>
+              <li>Capture <strong>Respondent classified by Gender</strong>.</li>
+              <li>Visualize as a <strong>Pie chart</strong>.</li>
+              <li>Utilize <strong>Segments</strong>, <strong>Size</strong> fields of Pie chart.</li>
+              <li>Include <strong>Dispay %</strong> feature.</li>
+              <li>Include a proper <strong>Chart title</strong>.</li>
+            </ul>
+          </li>
+          <li>
+            <p>In the second rectangle <strong>(Panel 2)</strong>:</p>
+            <ul>
+              <li>Capture <strong>Respondent Count for Countries</strong>.</li>
+              <li>Visualize as a <strong>Map chart</strong>.</li>
+              <li>Utilize <strong>Regions-Locations</strong>, <strong>Regions-Location color</strong> fields of Map chart.</li>
+              <li>Include a proper <strong>Chart title</strong>.</li>
+            </ul>
+          </li>
+          <li>
+            <p>In the third rectangle <strong>(Panel 3)</strong>:</p>
+            <ul>
+              <li>Capture <strong>Respondent Count by Age</strong>.</li>
+              <li>Visualize as a <strong>Line chart</strong>.</li>
+              <li>Utilize <strong>x-axis</strong>, <strong>y-axis</strong> fields of Line chart.</li>
+              <li>Include <strong>Show value labels</strong> feature.</li>
+              <li>Include <strong>Show markers</strong> feature.</li>
+              <li>Include a proper <strong>Chart title</strong>.</li>
+            </ul>
+          </li>
+          <li>
+            <p>In the fourth rectangle <strong>(Panel 4)</strong>:</p>
+            <ul>
+              <li>Capture <strong>Respondent Count by Gender, classified by Formal Education Level</strong>.</li>
+              <li>Visualize as a <strong>Stacked bar chart</strong>.</li>
+              <li>Utilize <strong>Bars</strong>, <strong>Length</strong>, <strong>Color</strong> fields of Stacked bar chart.</li>
+              <li>Include <strong>Show value labels</strong> feature.</li>
+              <li>Include a proper <strong>Chart title</strong>.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol><br>
+    <ol start="6">
+      <li>
+        <p>To get the Permanent link of read-only view of the dashboard, follow instructions below:</p>
+        <ul>
+          <li>
+            <p>On the application toolbar of your <strong>dashboard page</strong>, click <strong>Share</strong> icon.</p>
+            <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%205/Peer%20Graded%20Assignment%20-%20%20Building%20a%20dashboard%20with%20Cognos%20Dashboard%20Embedded/images/6.1.png" width="438" height="200">
+          </li>
+        </ul><br>
+        <ul>
+          <li>
+            <p>Click on the <strong>toggle button</strong> to turn on "Share with anyone who has the link".</p>
+            <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%205/Peer%20Graded%20Assignment%20-%20%20Building%20a%20dashboard%20with%20Cognos%20Dashboard%20Embedded/images/6.2.png" width="921" height="350">
+          </li>
+        </ul><br>
+        <ul>
+          <li>
+            <p>Click on the <strong>copy link</strong> icon to copy the "Permanent link to view the dashboard". This link always points to the most recent version of your dashboard. This link will be required to submit for your assignment to be graded.</p>
+            <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%205/Peer%20Graded%20Assignment%20-%20%20Building%20a%20dashboard%20with%20Cognos%20Dashboard%20Embedded/images/6.3.png" width="921" height="350">
+          </li>
+        </ul><br>
+      </li>
+    </ol>
+    <h2>Grading Information</h2>
+    <p>For your assignment to be graded in a subsequent step in this module, you will be required to submit the permanent link of read-only view of the dashboard you got in Task 6.</p>
+    <p><ins>The <strong>main grading criteria</strong> will be:</ins></p>
+    <ul>
+      <li>Have you provided permanent read-only view CDE link which opens your valid Cognos dashboard?</li>
+      <li>Have the correct tabs been created?</li>
+      <li>Have you created the required number of visualizations for each tab of the dashboard?</li>
+      <li>Have you captured the correct metrics, chart types, chart features and titles for each visualization?</li>
+      <li>Are the results correct?</li>
+    </ul>
+    <p><ins>You <strong>will not be judged</strong> on:</ins></p>
+    <ul>
+      <li>Your English language, including spelling or grammatical mistakes.</li>
+    </ul>
+    <h2>Author(s)</h2>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/sandipsahajoy?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBM-DA0321EN-SkillsNetwork-21426264&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Sandip Saha Joy</a></li>
+    </ul>
+    <h3>Other Contributor(s)</h3>
+    <ul>
+      <li></li>
+    </ul>
+    <h2>Changelog</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Version</th>
+          <th>Changed by</th>
+          <th>Change Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2020-10-23</td>
+          <td>1.0</td>
+          <td>Sandip Saha Joy</td>
+          <td>Initial version created</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2></h2>
+    <h3 align="center">© IBM Corporation 2020. All rights reserved.</h3>
+    <h3></h3>
+    <script>window.addEventListener('load', function() {
+snFaculty.inject();
+});</script>
+    <script src="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/scripts/inject.min.js"></script>
+  </body>
+</html>
